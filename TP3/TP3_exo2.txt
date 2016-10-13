@@ -1,0 +1,59 @@
+﻿int somme_diag1(int mat [N][N])
+{
+	int i,j,s1=0;
+		for(i=0;i<N;i++)
+		s1=s1+mat [i][i];
+
+}
+
+int somme_diag2(int mat [N][N])
+{
+	int i,j,s2=0;
+		for(i=0;i<N;i++)
+		s2=s2+mat [i][N-i];
+
+}
+
+int somme_ligne(int mat [N][N],int i)
+{
+		int b,somm=0;
+		for(b=0;b<N;b++)
+			sommeligne=somm+mat [i][b];
+}
+
+int somme_colonne(int mat [N][N],int i)
+{
+		int j,somm=0;
+		for(j=0;j<N;j++)
+			sommecolonne=somm+mat [j][i];
+}
+		
+void main()
+{
+	int i,N,S;
+	printf(“donnez la valeur N);
+	scanf(“%i”,&N);
+	printf(“donnez la matrice);
+	for(i=0;i<N;i++)
+		for(j=0;j<N;j++)
+			scanf(“%i”,&mat [i][j]);
+somme_diag1(mat [N][N]);
+somme_diag2(mat [N][N]);
+	if(s1!=s2)
+		printf(“Cette matrice n’est pas une matrice magique”);
+	else 
+	{
+		S=s1;
+		for(i=0;i<N;i++)
+			somme_ligne(mat [N][N],i);
+			if(S!=sommeligne)
+				printf(“Cette matrice n’est pas une matrice magique”);
+			else
+			for(i=0;i<N;i++)
+			somme_colonne(mat [N][N],i);
+			if(S!=sommecolonne)
+				printf(“Cette matrice n’est pas une matrice magique”);
+				else
+					printf(“Cette matrice est une matrice magique”);
+	}
+}				
